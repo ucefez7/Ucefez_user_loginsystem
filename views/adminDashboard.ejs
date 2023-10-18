@@ -1,0 +1,75 @@
+<%- include("partials/header") %>
+<div class="container">
+<style>
+body{
+  background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+</style><br>
+  <h1 style="color: white;" align="center">WELCOME TO ADMIN DASHBOARD</h1><br><br><br>
+
+  <div class="text-right">
+    <a href="/admin/new-user" class="btn btn-outline-light btn-lg px-5" style="margin-left: 0%; border-radius: 0%;">Add New User</a>
+    <a href="/admin/logout" class="btn btn-outline-light btn-lg px-5;" style="border-radius: 0%; margin-left: 1%;">Logout</a>
+  </div>
+
+  <br />
+
+  <form class="mb-3" action="/admin/searchUser" method="post">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Users"
+        name="search"
+      />
+      <div class="input-group-append">
+        <input type="submit" class="btn btn-outline-light btn-lg px-5" style="border-radius: 0%;" value="Search" />
+      </div>
+    </div>
+  </form>
+  <% if (users.length > 0) { %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Password</th>
+
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < users.length; i++) { %>
+      <tr>
+        <td><%=users[i].email %></td>
+        <td><%=users[i].fname %></td>
+        <td><%=users[i].lname %></td>
+        <td><%=users[i].password %></td>
+
+        <td>
+          <a
+            href="/admin/updateUser?id=<%= users[i]._id %>"
+            class="btn btn-outline-primary btn-md px-5"
+            class="btn btn-primary"
+            >Edit</a
+          >
+          <a
+            href="/admin/deleteUser?id=<%= users[i]._id %>"
+            class="btn btn-outline-primary btn-md px-5"
+            class="btn btn-danger"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<% } else { %>
+<p>Users Not found</p>
+<% } %> <%- include("partials/footer") %>

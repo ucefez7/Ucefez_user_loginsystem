@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+<style>
+  body{
+    background: #6a11cb;
+      
+      background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+      
+      background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
+  </style>
+<div class="text-center center-div mt-5" id="login">
+  <h3 style="color: white">Welcome to Dashboard</h3>
+  <h5 style="color: white"><%=locals.user%></h5>
+  <a href="/user/logout" style="color: white">Logout</a>
+</div>
+
+<%- include("partials/footer") %>

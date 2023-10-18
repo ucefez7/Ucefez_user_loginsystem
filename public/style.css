@@ -1,0 +1,38 @@
+/* .center-div{
+    padding-top: 5%;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+body{
+    background-image: url("4893775.webp");
+    background-size: cover;
+} */
+
+
+.gradient-custom {
+    
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+    a.btn{
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+
+
+    body{
+        background: #6a11cb;
+    
+        background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+        
+        background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    }
+
+    

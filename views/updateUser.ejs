@@ -1,0 +1,62 @@
+<%- include("partials/header") %>
+<section class="vh-150 gradient-custom">
+  <style>
+    body{
+      background: #6a11cb;
+        
+        background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+        
+        background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+    </style>
+  <a href="/" class="btn btn-outline-light btn-lg px-4 btn-sm" style="margin-top: 1%; margin-left: 2%;">Back</a>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+<h1 style="text-align: center" class="mt-5">Update Details</h1>
+<div class="container mt-5">
+  <form
+    action="/admin/updateUser?id=<%= user._id %>"
+    method="post"
+    class="d-flex flex-column align-items-center gap-3">
+
+    <div class="form-group">
+
+    <div class="form-group mt-3">
+      <input class="form-control form-control-lg" type="email"  name="email" placeholder="Email" value="<%=user.email%>"/>
+    </div>
+
+
+    <div class="form-group mt-3">
+      <input class="form-control form-control-lg"  type="text"  name="fname" placeholder="First Name"value="<%= user.fname%>"/>
+      </div>
+
+      <div class="form-group mt-3">
+      <input class="form-control form-control-lg" type="text"  name="lname" placeholder="Last Name" value="<%=user.lname %>" />
+    </div>
+
+    <div class="form-group mt-3">
+      <input class="form-control form-control-lg" name="password" placeholder="Password" value="<%= user.password%>"/>
+    </div>
+  </div>
+    <button class="btn btn-outline-light btn-lg px-5" type="submit">Update</button>
+
+
+  </form>
+ 
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<%- include("partials/footer") %>
